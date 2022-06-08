@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ColorPicker</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="grid">
+      <div class="card">
+        <h2><img src="img/bx-search-alt.svg" alt="" />Pick Colors</h2>
+        <p class="description">Choisissez une couleur dans la palette !</p>
+        <input class="colors" type="color" /><br />
+        <div class="btn">
+          <a href="#">Appliquer</a>
+        </div>
+        <p class="textHexa">
+          Voici le code héxadécimal : <br />
+          <span></span> <br />
+        </p>
+
+        <p class="textRgb">
+          Voici le code en RGB : <br />
+          <span></span>
+        </p>
+      </div>
+      <div class="show-colors"></div>
+    </div>
+  </body>
+  <script type="text/javascript" src="js/index.js"></script>
+</html>

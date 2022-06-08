@@ -1,0 +1,88 @@
+:root {
+  --text: "Lato", sans-seif;
+  --white: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-y: hidden;
+  background: var(--white);
+}
+
+h2,
+li,
+p,
+a,
+span,
+input {
+  font-family: var(--text);
+}
+
+/* Mise en place du grid */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: auto;
+  height: 100%;
+}
+
+.grid .card {
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+
+  width: 600px;
+  height: 700px;
+}
+
+.grid .card h2 {
+  font-size: 64px;
+  margin: 0px 100px;
+}
+
+.grid .card h2 img {
+  width: 15%;
+  margin-bottom: -8px;
+}
+
+.grid .card p.description {
+  margin: 50px 0px;
+  font-size: 30px;
+}
+
+.grid .card input.colors {
+  width: 150px;
+  height: 150px;
+  background: none;
+  border: none;
+}
+
+.grid .card .btn {
+  margin: 20px 0px 50px 0px;
+}
+
+.grid .card .btn a {
+  text-decoration: none;
+  color: black;
+  border: solid black 1px;
+  padding: 10px 40px;
+}
+
+.grid .card p {
+  font-size: 20px;
+  margin: 30px;
+}
+
+.grid .card p span {
+  font-weight: 700;
+}
+
+.grid .show-colors {
+  height: 1000px;
+}
