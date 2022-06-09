@@ -5,6 +5,21 @@ var spanH = document.querySelector("p.textHexa span");
 var spanR = document.querySelector("p.textRgb span");
 var resultat = document.querySelector(".show-colors");
 
+// Fonction générant des charactères aléatoires pour définir une couleur héxadécimales
+function valueHexaRand() {
+  var result = [];
+  var char = "0123456789abcdef";
+  var charlenght = char.length;
+
+  for (var i = 0; i < charlenght; i++) {
+    result.push(char.charAt(Math.floor(Math.random() * charlenght)));
+    return result.join("");
+  }
+}
+
+pickColors.value = `#${valueHexaRand()}${valueHexaRand()}${valueHexaRand()}${valueHexaRand()}${valueHexaRand()}${valueHexaRand()}`;
+resultat.style.background = pickColors.value;
+
 // Gère la récupération de la valeur de la palette de couleur dans l'input couleur
 btn.addEventListener("click", () => {
   resultat.style.background = pickColors.value;
