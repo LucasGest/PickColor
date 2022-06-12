@@ -17,31 +17,30 @@ function valueHexaRand() {
   }
 }
 
+String.prototype.convertToRGB = function () {
+  if (this.length != 6) {
+    throw "Seules les couleurs hexadécimales à six chiffres sont autorisées.";
+  }
+
+  var aRgbHex = this.match(/.{1,2}/g);
+  var aRgb = [
+    parseInt(aRgbHex[0], 16),
+    parseInt(aRgbHex[1], 16),
+    parseInt(aRgbHex[2], 16),
+  ];
+  return aRgb;
+};
+
 pickColors.value = `#${valueHexaRand()}${valueHexaRand()}${valueHexaRand()}${valueHexaRand()}${valueHexaRand()}${valueHexaRand()}`;
 resultat.style.background = pickColors.value;
+spanH.innerHTML = pickColors.value;
+spanR.innerHTML = `rgb(${pickColors.value.substr(1).convertToRGB()})`;
 
 // Gère la récupération de la valeur de la palette de couleur dans l'input couleur
 btn.addEventListener("click", () => {
   resultat.style.background = pickColors.value;
   spanH.innerHTML = pickColors.value;
-
-  var noHexa = pickColors.value.substr(1);
-
-  String.prototype.convertToRGB = function () {
-    if (this.length != 6) {
-      throw "Seules les couleurs hexadécimales à six chiffres sont autorisées.";
-    }
-
-    var aRgbHex = this.match(/.{1,2}/g);
-    var aRgb = [
-      parseInt(aRgbHex[0], 16),
-      parseInt(aRgbHex[1], 16),
-      parseInt(aRgbHex[2], 16),
-    ];
-    return aRgb;
-  };
-
-  spanR.innerHTML = `rgb(${noHexa.convertToRGB()})`;
+  spanR.innerHTML = `rgb(${pickColors.value.substr(1).convertToRGB()})`;
 });
 
 document.body.addEventListener("keypress", (event) => {
@@ -49,23 +48,18 @@ document.body.addEventListener("keypress", (event) => {
     event.preventDefault();
     resultat.style.background = pickColors.value;
     spanH.innerHTML = pickColors.value;
-
-    var noHexa = pickColors.value.substr(1);
-
-    String.prototype.convertToRGB = function () {
-      if (this.length != 6) {
-        throw "Seules les couleurs hexadécimales à six chiffres sont autorisées.";
-      }
-
-      var aRgbHex = this.match(/.{1,2}/g);
-      var aRgb = [
-        parseInt(aRgbHex[0], 16),
-        parseInt(aRgbHex[1], 16),
-        parseInt(aRgbHex[2], 16),
-      ];
-      return aRgb;
-    };
-
-    spanR.innerHTML = `rgb(${noHexa.convertToRGB()})`;
+    spanR.innerHTML = `rgb(${pickColors.value.substr(1).convertToRGB()})`;
   }
+});
+
+var lineDrawing = anime({
+  targets: "#lineDrawing .lines path",
+  strokeDashoffset: [anime.setDashoffset, 0],
+  easing: "easeInOutSine",
+  duration: 200,
+  delay: function (el, i) {
+    return i * 250;
+  },
+  direction: "alternate",
+  loop: false,
 });
