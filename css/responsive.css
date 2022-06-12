@@ -1,7 +1,11 @@
 @media only screen and (max-width: 600px) {
   
   body{
-  overflox-x: hidden;
+    overflox-x: hidden;
+  }
+  
+  .container_img_svg{
+    width: 100%;
   }
   
   .show-colors {
