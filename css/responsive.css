@@ -2,4 +2,10 @@
   .show-colors {
     display: none;
   }
+  
+    .grid .card {
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 }
