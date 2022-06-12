@@ -3,9 +3,7 @@
     display: none;
   }
   
-    .grid .card {
-    height: 100%;
-    margin-top: auto;
-    margin-bottom: auto;
+  .grid .card {
+    margin: 300px 0px;
   }
 }
