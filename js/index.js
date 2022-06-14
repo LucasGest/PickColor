@@ -4,6 +4,10 @@ var container = document.querySelector(".center");
 var spanH = document.querySelector("p.textHexa span");
 var spanR = document.querySelector("p.textRgb span");
 var resultat = document.querySelector(".show-colors");
+var responsive_form = document.querySelector(".form_one");
+var responsive_form_bis = document.querySelector(".form_two");
+var responsive_form_ter = document.querySelector(".form_three");
+var responsive_form_qua = document.querySelector(".form_four");
 
 // Fonction générant des charactères aléatoires pour définir une couleur héxadécimales
 function valueHexaRand() {
@@ -33,6 +37,10 @@ String.prototype.convertToRGB = function () {
 
 pickColors.value = `#${valueHexaRand()}${valueHexaRand()}${valueHexaRand()}${valueHexaRand()}${valueHexaRand()}${valueHexaRand()}`;
 resultat.style.background = pickColors.value;
+responsive_form.style.background = pickColors.value;
+responsive_form_bis.style.background = pickColors.value;
+responsive_form_ter.style.background = pickColors.value;
+responsive_form_qua.style.background = pickColors.value;
 spanH.innerHTML = pickColors.value;
 spanR.innerHTML = `rgb(${pickColors.value.substr(1).convertToRGB()})`;
 
