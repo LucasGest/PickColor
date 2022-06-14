@@ -173,3 +173,10 @@ input {
 #lineDrawing #Calque_1 {
   width: 60%;
 }
+
+.form_one,
+.form_two,
+.form_three,
+.form_four {
+  display: none;
+}
