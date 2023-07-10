@@ -1,0 +1,89 @@
+:root {
+  --text: "Lato", sans-seif;
+  --white: white;
+}
+
+body {
+  font-family: var(--text);
+}
+
+/*************************************************************************************************************************************/
+/************************************************MENTIONS LEGAES**********************************************************************/
+/*************************************************************************************************************************************/
+/*  */
+/* Mentions légales */
+/*  */
+
+.container-mention {
+  margin-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  width: 1400px;
+}
+
+.container-mention .content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.container-mention h1 {
+  margin: 20px 0px 30px;
+  text-align: center;
+}
+
+.container-mention p.date {
+  position: absolute;
+  top: 10%;
+  text-align: center;
+}
+
+.container-mention p.description {
+  margin: 100px 0px;
+}
+
+.container-mention h2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.container-mention p:not(p.description) {
+  text-align: left;
+  margin-right: auto;
+  margin-left: auto;
+  width: 320px;
+}
+
+.editeur,
+.hebergeur,
+.site,
+.donnees,
+.cookie,
+.propriete {
+  width: 350px;
+}
+
+.editeur h2,
+.hebergeur h2,
+.site h2,
+.donnees h2,
+.cookie h2,
+.propriete h2 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+p {
+  margin: 20px;
+}
+
+p a.back-to-home {
+  text-decoration: none;
+  color: white;
+  background: black;
+  padding: 10px;
+}
