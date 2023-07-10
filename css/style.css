@@ -97,6 +97,12 @@ input {
   transition-duration: 0.25s;
 }
 
+.label {
+  padding: 12px 24px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
 .menu__item {
   display: block;
   padding: 12px 24px;
